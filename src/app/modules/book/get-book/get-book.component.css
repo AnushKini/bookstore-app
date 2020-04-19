@@ -1,0 +1,80 @@
+.th {
+    color: rgb(122, 56, 56);
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+table.blueTable {
+    font-family: "Arial Black", Gadget, sans-serif;
+    border: 1px solid #1C6EA4;
+    background-color: #EEEEEE;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table.blueTable td,
+table.blueTable th {
+    border: 1px solid #AAAAAA;
+    padding: 3px 2px;
+}
+
+table.blueTable tbody td {
+    font-size: 13px;
+}
+
+table.blueTable tr:nth-child(even) {
+    background: #D0E4F5;
+}
+
+table.blueTable thead {
+    background: #1C6EA4;
+    background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    border-bottom: 2px solid #444444;
+}
+
+table.blueTable thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-left: 2px solid #D0E4F5;
+}
+
+table.blueTable thead th:first-child {
+    border-left: none;
+}
+
+.errors {
+    border-bottom: red;
+    color: red;
+    font-size: 12px;
+}
+
+input.ng-invalid.ng-touched {
+    border-bottom: 3px solid red;
+}
+
+input.ng-valid.ng-touched {
+    border-bottom: 3px solid green;
+}
+
+.modal-header {
+    background-color: #337AB7;
+    padding: 16px 16px;
+    color: #FFF;
+    border-bottom: 2px dashed #337AB7;
+}
+
+label {
+    font-weight: bold;
+}

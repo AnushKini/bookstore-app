@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+                <h3>Welcome</h3>
+                <p>Create a new book!</p>
+            </div>
+            <div class="col-md-9 register-right">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Please enter new book details</h3>
+
+                        <form [formGroup]="createForm">
+                            <div class="row register-form">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="Book Name *" placeholder="Book Name *" formControlName="bookName" required>
+                                        <div class="errors" *ngIf="createForm.get('bookName').touched && createForm.get('bookName').hasError('required')">This field is required</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="author" placeholder="Author *" formControlName="author" required>
+                                        <div class="errors" *ngIf="createForm.get('author').touched && createForm.get('author').hasError('required')">This field is required</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="category" placeholder="Category *" formControlName="category" required>
+                                        <div class="errors" *ngIf="createForm.get('category').touched && createForm.get('category').hasError('required')">This field is required</div>
+                                    </div>
+
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="publication" placeholder="Publication *" formControlName="publication" required>
+                                        <div class="errors" *ngIf="createForm.get('publication').touched && createForm.get('publication').hasError('required')">This field is required</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" id="price" placeholder="Price*" formControlName="price" required>
+                                        <div class="errors" *ngIf="createForm.get('price').touched && createForm.get('price').hasError('required')">This field is required</div>
+                                    </div>
+                                    <button type="submit" class="btnRegister" (click)="addBook()">Create</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
